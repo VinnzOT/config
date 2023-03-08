@@ -2,7 +2,7 @@
   
   <h1 align="center">
 
-    <a href="https://allgen1.000webhostapp.com/">Vinnz#6666  😃️</a>
+Vinnz#6666  😃️
   </h1>
   
 
