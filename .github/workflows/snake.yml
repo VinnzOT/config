@@ -1,0 +1,25 @@
+namn : Generera data
+
+på :
+  schema : # kör var 12:e timme
+    - cron : " * */12 * * * "
+  workflow_dispatch :
+
+jobb :
+  bygga :
+    namn : Jobb för att uppdatera data
+    runs-on : ubuntu-senaste
+    steg :
+      # Snake Animation
+      - använder : Platane/snk@master
+        id : orm-gif
+        med :
+          github_user_name : duribeiro
+          svg_out_path : dist/github-contribution-grid-snake.svg
+
+      - använder : crazy-max/ghaction-github-pages@v2.1.3
+        med :
+          target_branch : output
+          build_dir : dist
+        env :
+          GITHUB_TOKEN : ${{ secrets.GITHUB_TOKEN }}
